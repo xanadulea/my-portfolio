@@ -2,6 +2,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import Testimonials from "../components/Testimonials";
 import Process from "../components/Process";
+import InteractiveDemo from "../components/InteractiveDemo";
 
 export default function Home() {
   return (
@@ -56,6 +57,7 @@ export default function Home() {
 
       {/* Process */}
       <Process />
+       <InteractiveDemo />
     </main>
   );
 }
