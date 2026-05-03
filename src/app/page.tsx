@@ -3,6 +3,7 @@ import ProjectCard from "../components/ProjectCard";
 import Testimonials from "../components/Testimonials";
 import Process from "../components/Process";
 import InteractiveDemo from "../components/InteractiveDemo";
+import ContactForm from "../components/ContactForm";
 
 export default function Home() {
   return (
@@ -58,6 +59,8 @@ export default function Home() {
       {/* Process */}
       <Process />
        <InteractiveDemo />
+             <ContactForm />
+
     </main>
   );
 }
