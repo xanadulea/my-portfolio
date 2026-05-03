@@ -13,26 +13,21 @@ export default function ContactForm() {
   const [errorMsg, setErrorMsg] = useState("");
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setStatus("sending");
+  e.preventDefault();
+  setStatus("sending");
 
-    const formData = new FormData();
-    formData.append("name", name);
-    formData.append("email", email);
-    formData.append("message", message);
+  const result = await sendEmail(name, email, message);
 
-    const result = await sendEmail(formData);
-
-    if (result.success) {
-      setStatus("sent");
-      setName("");
-      setEmail("");
-      setMessage("");
-    } else {
-      setStatus("error");
-      setErrorMsg(result.error || "Something went wrong.");
-    }
+  if (result.success) {
+    setStatus("sent");
+    setName("");
+    setEmail("");
+    setMessage("");
+  } else {
+    setStatus("error");
+    setErrorMsg(result.error || "Something went wrong.");
   }
+}
 
   return (
     <section id="contact" className="py-24 px-6 max-w-2xl mx-auto text-center">
