@@ -64,7 +64,6 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        {/* Progress bar */}
         <div className="mb-8">
           <div className="flex justify-between text-sm text-neutral-500 mb-2">
             <span>
@@ -81,7 +80,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Form card */}
         <AnimatePresence mode="wait" custom={direction}>
           <motion.div
             key={step}
